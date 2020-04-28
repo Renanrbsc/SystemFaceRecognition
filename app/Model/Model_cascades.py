@@ -10,6 +10,10 @@ class Cascades:
     def __init__(self, type_cascade):
         self.cascade = cv2.CascadeClassifier(type_cascade)
 
-    def detect_multi_scale(self, color):
-        cascade = self.cascade.detectMultiScale(color, scaleFactor=1.3, minNeighbors=5, minSize=(30, 30))
+    def detect_multi_scale(self, color, dimensions: list):
+        cascade = self.cascade.detectMultiScale(color,
+                                                scaleFactor=dimensions[0],
+                                                minNeighbors=dimensions[1],
+                                                minSize=dimensions[2]
+                                                )
         return cascade
