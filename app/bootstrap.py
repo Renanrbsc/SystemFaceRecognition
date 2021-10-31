@@ -7,8 +7,8 @@ class Startup:
 
     @classmethod
     def define_platform(cls):
-        print("1 - Windows\n" \
-              "0 - Linux\n")
+        print("0 - Windows\n" \
+              "-1 - Linux\n")
         platform = int(input("Informe o tipo de sistema utilizado: "))
         defined_platform = ControllerRecognition(platform)
         return cls(defined_platform)

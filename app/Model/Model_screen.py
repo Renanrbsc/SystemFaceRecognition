@@ -15,7 +15,7 @@ class Screen:
 
     def redimension_image(self):
         self.image = cv2.flip(self.image, 0)  # Flip vertically
-        self.image = cv2.rotate(self.image, cv2.ROTATE_90_COUNTERCLOCKWISE)  # Rotate vertically
+        self.image = cv2.rotate(self.image, cv2.ROTATE_180)  # Rotate vertically
         return self.image
 
     def title_screen(self):
